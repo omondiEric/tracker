@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+//this is a component implemented as a functional react component which is different from the class component.
+//functional components do not have state or life cycle methods
 const Exercise = props => (
   <tr>
     <td>{props.exercise.username}</td>

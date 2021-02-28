@@ -7,12 +7,14 @@ export default class CreateExercise extends Component {
   constructor(props) {
     super(props);
 
+    //make sure "this" refers to the class and bind them to the correct method
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
+    //state of this component that corresponds to the DB fields
     this.state = {
       username: '',
       description: '',
@@ -22,6 +24,7 @@ export default class CreateExercise extends Component {
     }
   }
 
+  //auto called right before anything loads
   componentDidMount() {
     axios.get('http://localhost:5000/users/')
       .then(response => {
@@ -80,6 +83,7 @@ export default class CreateExercise extends Component {
     window.location = '/';
   }
 
+  //render the form for input
   render() {
     return (
     <div>
