@@ -13,8 +13,8 @@ app.use(cors());
 app.use(express.json());
 
 //get uri from mdb dashboard
-//const uri = process.env.ATLAS_URI;
-const uri = process.env.MONGODB_URI
+const uri = process.env.ATLAS_URI;
+//const uri = process.env.MONGODB_URI
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
 const connection = mongoose.connection;
